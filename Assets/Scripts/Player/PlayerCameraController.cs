@@ -14,9 +14,12 @@ namespace LostInTheSnow
         [SerializeField] private InputActionReference _cameraRotationYAction;
         [SerializeField] private float _cameraRotationYLimit = 85.0f;
 
+        private float _cameraRotX;
+
         private void Start()
         {
             Cursor.lockState = CursorLockMode.Locked;
+            _cameraRotX = _cameraContainer.transform.localRotation.x;
         }
 
         private void Update()
@@ -27,13 +30,10 @@ namespace LostInTheSnow
 
             _body.transform.eulerAngles += new Vector3(0.0f, mouseX, 0.0f) * _sensitivity * Time.deltaTime;
 
-            Vector3 cameraContainerEulerAngles = _cameraContainer.transform.eulerAngles;
-            cameraContainerEulerAngles += new Vector3(-mouseY, 0.0f, 0.0f) * _sensitivity * Time.deltaTime;
-
-            //cameraContainerEulerAngles.x = Mathf.Clamp(cameraContainerEulerAngles.x, -_cameraRotationYLimit, _cameraRotationYLimit);
-            //Debug.Log(cameraContainerEulerAngles);
-            _cameraContainer.transform.rotation = Quaternion.Euler(cameraContainerEulerAngles);
-
+           
+            _cameraRotX -= (mouseY * _sensitivity) * Time.deltaTime;
+            _cameraRotX = Mathf.Clamp(_cameraRotX, -_cameraRotationYLimit, _cameraRotationYLimit); 
+            _cameraContainer.transform.localRotation = Quaternion.Euler(_cameraRotX, 0.0f, 0.0f);
             
         }
 

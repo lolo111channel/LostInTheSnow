@@ -4,6 +4,11 @@ namespace LostInTheSnow
 {
     public class PlayerMovement : MonoBehaviour
     {
+        public delegate void Moving();
+        public event Moving OnMoving;
+        public event Moving OnStopped;
+
+
         [SerializeField] private float _movementSpeed = 100.0f;
         [SerializeField] private float _acceleration = 0.85f;
         [SerializeField] private float _friction = 0.25f;
@@ -31,6 +36,8 @@ namespace LostInTheSnow
 
                 _playerVelocity = _playerVelocity.normalized;
                 _playerVelocity = new Vector3(motionX, _playerVelocity.y ,motionZ);
+
+                OnMoving?.Invoke();
                 return;
             }
 
@@ -40,7 +47,7 @@ namespace LostInTheSnow
             _playerVelocity = _playerVelocity.normalized;
             _playerVelocity = new Vector3(motionX, _playerVelocity.y, motionZ);
 
-
+            OnStopped?.Invoke();
         }
 
         private void OnEnable()
@@ -51,8 +58,11 @@ namespace LostInTheSnow
 
         private void FixedUpdate()
         {
-            //_body.transform.forward = _cameraContainer.transform.forward;
+            if (!_characterController.isGrounded)
+                _playerVelocity.y -= _gravityStrength * Time.deltaTime;
+
             _characterController.Move(_playerVelocity);
+
         }
     }
 }
