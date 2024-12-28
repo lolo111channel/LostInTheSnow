@@ -7,5 +7,6 @@ namespace LostInTheSnow
     {
         public int Id = 0;
         public string ItemName = "item";
+        [HideInInspector] public GameObject Prefab = null;
     }
 }

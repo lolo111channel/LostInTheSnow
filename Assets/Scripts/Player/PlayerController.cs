@@ -8,9 +8,12 @@ namespace LostInTheSnow
     {
         [SerializeField] private PlayerMovement _playerMovement;
         [SerializeField] private PlayerInteraction _playerInteraction;
-        
+        [SerializeField] private Inventory _inventory;
+
         [SerializeField] private InputActionReference _moveAction;
         [SerializeField] private InputActionReference _interactionAction;
+        [SerializeField] private InputActionReference _dropItemAction;
+
 
         private bool _interactionStart = false;
         private float _interactionTime = 0.0f;
@@ -19,12 +22,20 @@ namespace LostInTheSnow
         {
             _interactionAction.action.started += InteractionStarted;
             _interactionAction.action.canceled += InteractionCanceled;
+            _dropItemAction.action.performed += DropItemPerformed;
         }
+
 
         private void OnDisable()
         {
             _interactionAction.action.started -= InteractionStarted;
             _interactionAction.action.canceled -= InteractionCanceled;
+            _dropItemAction.action.performed -= DropItemPerformed;
+
+        }
+        private void DropItemPerformed(InputAction.CallbackContext context)
+        {
+            _inventory.DropItem();
         }
 
         private void InteractionStarted(InputAction.CallbackContext context)

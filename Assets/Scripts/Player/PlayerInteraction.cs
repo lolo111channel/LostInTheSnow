@@ -5,9 +5,11 @@ namespace LostInTheSnow
     public class PlayerInteraction : MonoBehaviour
     {
         [SerializeField] private float _interactionDistance = 100.0f;
+        [SerializeField] private Camera _camera;
 
         public bool Interaction(float time)
         {
+            
             Collider collider = GetHitCollider();
             if (collider == null)
                 return true;
@@ -18,11 +20,26 @@ namespace LostInTheSnow
             return interactionable.Interaction(gameObject, time);
         }
 
+        private void FixedUpdate()
+        {
+            Collider collider = GetHitCollider();
+            if (collider != null)
+            {
+                IHint hint = collider.gameObject.GetComponent<IHint>();
+                if (hint != null)
+                    HintView.SetHint(hint.GetHint());
+                else
+                    HintView.SetHint("");
+            }
+        }
+
 
         private Collider GetHitCollider()
         {
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.forward, out hit, _interactionDistance))
+            Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out hit, _interactionDistance))
             {
                 return hit.collider;
             }
