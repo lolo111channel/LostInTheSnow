@@ -1,0 +1,23 @@
+{
+    "header1": [
+        {"type":"dialogue","arguments":["You", "Test",""]},
+        {"type":"action","id":"print","arguments":["Hello World"]},
+        {
+            "type":"condition",
+            "id":"Test",
+            "arguments":[true],
+            "lines": [
+                {"type":"dialogue","arguments":["You", "Test in the condition",""]},
+                {"type":"dialogue","arguments":["You", "Test in the condition",""]}
+            ]
+        },
+
+        {"type":"dialogue","arguments":["You", "Test after the condition",""]},
+        {"type":"end"}
+    ],
+
+    "header2": [
+        {"type":"dialogue","arguments":["You", "Header 2",""]},
+        {"type":"end"}
+    ]
+}
