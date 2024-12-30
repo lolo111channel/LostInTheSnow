@@ -2,10 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
-using Unity.VisualScripting;
 
 namespace CBStuff.DialogueSystem
 {
@@ -27,7 +24,7 @@ namespace CBStuff.DialogueSystem
 
             if (inheritingClasses.Count() <= 0) return;
 
-            var suitableClass = inheritingClasses.Select(x => x).Where(x => x.GetAttribute<DialogueActionIdAttribute>().Id == this.Id).FirstOrDefault();
+            var suitableClass = inheritingClasses.Select(x => x).Where(x => x.GetCustomAttribute<DialogueIdAttribute>().Id == this.Id).FirstOrDefault();
 
             if (suitableClass != null)
                 Func = Activator.CreateInstance(suitableClass) as IDialogueActionFunc;

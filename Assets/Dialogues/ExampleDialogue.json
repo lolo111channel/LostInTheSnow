@@ -4,11 +4,10 @@
         {"type":"action","id":"print","arguments":["Hello World"]},
         {
             "type":"condition",
-            "id":"Test",
+            "id":"test",
             "arguments":[true],
             "lines": [
-                {"type":"dialogue","arguments":["You", "Test in the condition",""]},
-                {"type":"dialogue","arguments":["You", "Test in the condition",""]}
+                {"type":"action","id":"print","arguments":["Hello Condition"]}
             ]
         },
 

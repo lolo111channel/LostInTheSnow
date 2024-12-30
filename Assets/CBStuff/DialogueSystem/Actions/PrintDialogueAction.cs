@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CBStuff.DialogueSystem
 {
-    [DialogueActionId("print")]
+    [DialogueId("print")]
     public class PrintDialogueAction : IDialogueActionFunc
     {
         public void Action(object[] args)

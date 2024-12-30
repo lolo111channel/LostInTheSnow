@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 namespace CBStuff.DialogueSystem
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
-    public class DialogueActionIdAttribute : Attribute
+    public class DialogueIdAttribute : Attribute
     {
         public string Id { get; private set; } = "";
-        public DialogueActionIdAttribute(string id) 
+        public DialogueIdAttribute(string id) 
         {
             this.Id = id;
         }

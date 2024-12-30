@@ -12,39 +12,15 @@ namespace CBStuff.DialogueSystem
 {
     public class DialogueDeseralization
     {
-        private static string testJson = @"
-        {
-            ""header1"": [
-                {""type"":""dialogue"",""arguments"":[""You"", ""Test"",""""]},
-                {""type"":""action"",""id"":""print"",""arguments"":[""Hello World""]},
-                {
-                    ""type"":""condition"",
-                    ""id"":""Test"",
-                    ""arguments"":[true],
-                    ""lines"": [
-                        {""type"":""dialogue"",""arguments"":[""You"", ""Test in the condition"",""""]},
-                        {""type"":""dialogue"",""arguments"":[""You"", ""Test in the condition"",""""]}
-                    ]
-                },
-
-                {""type"":""dialogue"",""arguments"":[""You"", ""Test after the condition"",""""]},
-                {""type"":""end""}
-            ],
-
-            ""header2"": [
-                {""type"":""dialogue"",""arguments"":[""You"", ""Header 2"",""""]},
-                {""type"":""end""}
-        ]
-        }";
-
         public static DialogueLineType[] GetDialogues(string json,string headerName)
         {
             List<DialogueLineType> dialogueLineTypes = new();
 
-            json = testJson;
+            
             var deserializedObject = JsonConvert.DeserializeObject<Dictionary<string, object>>(json);
             bool isHasHeader = deserializedObject.Keys.Select(x => x).Where(x => x == headerName).Count() > 0 ? true : false;
-            if (!isHasHeader) return null;
+
+            if (!isHasHeader) return dialogueLineTypes.ToArray();
             
             JArray headerDialogues = deserializedObject[headerName] as JArray;
             
