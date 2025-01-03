@@ -1,13 +1,14 @@
 {
     "header1": [
         {"type":"dialogue","arguments":["You", "Test",""]},
-        {"type":"action","id":"print","arguments":["Hello World"]},
+        {"type":"action","id":"print","arguments":["Action"]},
         {
             "type":"condition",
             "id":"test",
             "arguments":[true],
             "lines": [
-                {"type":"action","id":"print","arguments":["Hello Condition"]}
+                {"type":"dialogue","arguments":["You", "Test1",""]},
+                {"type":"action","id":"print","arguments":["Action"]}
             ]
         },
 
@@ -17,6 +18,8 @@
 
     "header2": [
         {"type":"dialogue","arguments":["You", "Header 2",""]},
+        {"type":"action","id":"print","arguments":["Action"]},
+        {"type":"dialogue","arguments":["You", "Header 2213",""]},
         {"type":"end"}
     ]
 }
