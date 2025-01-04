@@ -27,7 +27,7 @@ namespace LostInTheSnow
         private void OnMoving()
         {
             // y = sin(4x) * (5/10) + 0.6 -> pattern
-            float newLocalPosY = (Mathf.Sin(_frequency * _time) * _maxPosY) + _currentPosY;
+            float newLocalPosY = (Mathf.Sin(_frequency * _time) * _maxPosY * Time.deltaTime) + _currentPosY;
 
             Vector3 newLocalPos = new();
             newLocalPos.x = gameObject.transform.localPosition.x;

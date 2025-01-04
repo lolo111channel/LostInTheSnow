@@ -2,13 +2,15 @@
     "header1": [
         {"type":"dialogue","arguments":["You", "Test",""]},
         {"type":"action","id":"print","arguments":["Action"]},
+        {"type":"action","id":"teleport","arguments":["ref:player",50.0, 75.0, 25.0]},
         {
             "type":"condition",
             "id":"test",
-            "arguments":[true],
+            "arguments":[false],
             "lines": [
                 {"type":"dialogue","arguments":["You", "Test1",""]},
-                {"type":"action","id":"print","arguments":["Action"]}
+                {"type":"action","id":"print","arguments":["Action"]},
+                {"type":"end"}
             ]
         },
 

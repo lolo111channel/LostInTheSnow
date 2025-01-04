@@ -1,7 +1,8 @@
 using System.IO;
 using CBStuff.DialogueSystem;
-using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
+using Newtonsoft.Json.Linq;
 
 namespace LostInTheSnow
 {
@@ -21,6 +22,8 @@ namespace LostInTheSnow
         private int[] _currentIndexes = new int[10];
         private int _dialoguesLinesDimmension = 0;
 
+        [SerializeField] private ReferencesForDialogue _referencesForDialogue;
+
         public void StartDialogue(string path, string headerName)
         {
             string pathCombined = Application.dataPath + "/" + path;
@@ -29,15 +32,16 @@ namespace LostInTheSnow
                 return;
             }
 
-            if (IsDialogueRunning && _dialoguesLinesDimmension < 1)
+            if (IsDialogueRunning)
             {
                 return;
             }
 
+            _dialoguesLinesDimmension = 0;
             _currentIndexes[_dialoguesLinesDimmension] = 0;
             _dialoguesLines[_dialoguesLinesDimmension] = GetDialogues.FromJsonFile(pathCombined, headerName);
 
-            CurrentLine = _dialoguesLines[_dialoguesLinesDimmension][_currentIndexes[_dialoguesLinesDimmension]];
+            CurrentLine = _dialoguesLines[_dialoguesLinesDimmension][GetCurrentIndex()];
 
 
             IsDialogueRunning = true;
@@ -48,10 +52,15 @@ namespace LostInTheSnow
 
         public void NextLine()
         {
+            if (!IsDialogueRunning)
+            {
+                return;
+            }
+
             if (_currentIndexes[_dialoguesLinesDimmension] < _dialoguesLines[_dialoguesLinesDimmension].Length  - 1)
             {
                 _currentIndexes[_dialoguesLinesDimmension]++;
-                CurrentLine = _dialoguesLines[_dialoguesLinesDimmension][_currentIndexes[_dialoguesLinesDimmension]];
+                CurrentLine = _dialoguesLines[_dialoguesLinesDimmension][GetCurrentIndex()];
                 NewCurrentLine?.Invoke(CurrentLine);
                 MakeAction();
                 return;
@@ -59,16 +68,21 @@ namespace LostInTheSnow
 
             if (_dialoguesLinesDimmension > 0)
             {
-                //_dialoguesLines = new DialogueLineType[_dialoguesLinesDimmension][];
                 _dialoguesLinesDimmension--;
 
-                CurrentLine = _dialoguesLines[_dialoguesLinesDimmension][_currentIndexes[_dialoguesLinesDimmension]];
+                CurrentLine = _dialoguesLines[_dialoguesLinesDimmension][GetCurrentIndex()];
                 return;
             }
 
             IsDialogueRunning = false;
             CurrentLine = null;
-            _dialoguesLines = new DialogueLineType[_dialoguesLinesDimmension][];
+            _dialoguesLines = new DialogueLineType[10][];
+            DialogueFinished?.Invoke();
+        }
+
+        private void StopDialogue()
+        {
+            IsDialogueRunning = false;
             DialogueFinished?.Invoke();
         }
 
@@ -77,8 +91,33 @@ namespace LostInTheSnow
             DialogueLineType[] dialogues = DialogueDeseralization.GetDialogues(json, headerName);
             _dialoguesLines[_dialoguesLinesDimmension] = dialogues;
             _currentIndexes[_dialoguesLinesDimmension] = 0;
-            CurrentLine = _dialoguesLines[_dialoguesLinesDimmension][_currentIndexes[_dialoguesLinesDimmension]];
+            CurrentLine = _dialoguesLines[_dialoguesLinesDimmension][GetCurrentIndex()];
             NewCurrentLine?.Invoke(CurrentLine);
+        }
+
+        private object[] ChangeArgumentsOnArgumentsWithReference(object[] args)
+        {
+            List<object> newArgs = new();
+            foreach (object arg in args)
+            {
+                if (((JValue)arg).Value is string)
+                {
+                    string argStr = arg.ToString();
+                    string[] subs = argStr.Split(":");
+
+                    if (subs.Length > 1 && subs[0] == "ref") 
+                    {
+                        GameObject reference = _referencesForDialogue.GetReference(subs[1]);
+                        newArgs.Add(reference);
+                        continue;
+                    
+                    }
+                }
+
+                newArgs.Add(arg);
+            }
+
+            return newArgs.ToArray();
         }
 
         private void MakeAction()
@@ -86,17 +125,26 @@ namespace LostInTheSnow
             if (CurrentLine is DialogueAction)
             {
                 DialogueAction dialogueAction = (DialogueAction)CurrentLine;
-                dialogueAction.Func.Action(dialogueAction.Arguments);
+                object[] dialogueArgs = ChangeArgumentsOnArgumentsWithReference(dialogueAction.Arguments);
+                dialogueAction.Func.Action(dialogueArgs);
             }
             else if (CurrentLine is DialogueCondition)
             {
                 DialogueCondition dialogueCondition = (DialogueCondition)CurrentLine;
-                if (dialogueCondition.Func.Condition(dialogueCondition.Arguments))
+                object[] dialogueArgs = ChangeArgumentsOnArgumentsWithReference(dialogueCondition.Arguments);
+                if (dialogueCondition.Func.Condition(dialogueArgs))
                 {
                     _dialoguesLinesDimmension++;
                     MakeNewDialogueDimmension(dialogueCondition.Dialogue, "lines");
                 }
             }
+            else if (CurrentLine is DialogueEnd)
+            {
+                StopDialogue();
+            }
+
         }
+
+        private int GetCurrentIndex() => _currentIndexes[_dialoguesLinesDimmension];
     }
 }

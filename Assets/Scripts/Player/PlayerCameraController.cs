@@ -16,11 +16,16 @@ namespace LostInTheSnow
 
         private float _cameraRotX;
 
-        private void Start()
+        private void OnEnable()
         {
             Cursor.lockState = CursorLockMode.Locked;
+        }
+
+        private void Start()
+        {
             _cameraRotX = _cameraContainer.transform.localRotation.x;
         }
+
 
         private void Update()
         {
