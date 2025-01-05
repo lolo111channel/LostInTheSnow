@@ -1,16 +1,14 @@
 {
     "header1": [
         {"type":"dialogue","arguments":["You", "Test",""]},
-        {"type":"action","id":"print","arguments":["Action"]},
-        {"type":"action","id":"teleport","arguments":["ref:player",50.0, 75.0, 25.0]},
+        {"type":"action","id":"print","arguments":["1"]},
         {
             "type":"condition",
             "id":"test",
-            "arguments":[false],
+            "arguments":[true],
             "lines": [
                 {"type":"dialogue","arguments":["You", "Test1",""]},
-                {"type":"action","id":"print","arguments":["Action"]},
-                {"type":"end"}
+                {"type":"action","id":"print","arguments":["Action"]}
             ]
         },
 

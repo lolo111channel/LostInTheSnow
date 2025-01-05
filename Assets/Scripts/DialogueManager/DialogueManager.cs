@@ -127,6 +127,7 @@ namespace LostInTheSnow
                 DialogueAction dialogueAction = (DialogueAction)CurrentLine;
                 object[] dialogueArgs = ChangeArgumentsOnArgumentsWithReference(dialogueAction.Arguments);
                 dialogueAction.Func.Action(dialogueArgs);
+                NextLine();
             }
             else if (CurrentLine is DialogueCondition)
             {
@@ -136,6 +137,7 @@ namespace LostInTheSnow
                 {
                     _dialoguesLinesDimmension++;
                     MakeNewDialogueDimmension(dialogueCondition.Dialogue, "lines");
+                    NextLine();
                 }
             }
             else if (CurrentLine is DialogueEnd)

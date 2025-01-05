@@ -16,29 +16,7 @@ namespace LostInTheSnow
             string path = "Dialogues/ExampleDialogue.json";
             dialogueManager.StartDialogue(path,"header1");
 
-            if (dialogueManager.CurrentLine is DialogueLine)
-            {
-                DialogueLine line = (DialogueLine)dialogueManager.CurrentLine;
-                Debug.Log(line.Arguments[1]);
-                dialogueManager.NextLine();
-            }
 
-        }
-
-        private void Update()
-        {
-            if (dialogueManager.IsDialogueRunning)
-            {
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    if (dialogueManager.CurrentLine is DialogueLine)
-                    {
-                        DialogueLine line = (DialogueLine)dialogueManager.CurrentLine;
-                        Debug.Log(line.Arguments[1]);
-                    }
-                    dialogueManager.NextLine();
-                }
-            }
         }
     }
 

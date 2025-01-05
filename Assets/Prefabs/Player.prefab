@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 1480670621927646779}
   - component: {fileID: 950292347690134702}
   - component: {fileID: 2819964815444538867}
+  - component: {fileID: 3348856016974027978}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -162,6 +163,7 @@ MonoBehaviour:
   - {fileID: 185517419480369085}
   - {fileID: 1480670621927646779}
   - {fileID: 2819964815444538867}
+  - {fileID: 3348856016974027978}
   _states:
   - StateName: GAMEPLAY
     Components:
@@ -172,6 +174,7 @@ MonoBehaviour:
   - StateName: DIALOGUE
     Components:
     - {fileID: 2819964815444538867}
+    - {fileID: 3348856016974027978}
   _currentState:
     StateName: test
     Components: []
@@ -327,6 +330,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb24454936b80c4cada174abdaf8303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3348856016974027978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5258440838355939587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b1e0f7d3dccac444978f6f4d362b524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 7497008453362758015}
+  _nextDialogueAction: {fileID: 4579204322963127275, guid: d5772e9a39b53ef43bce9c806fd94999, type: 3}
 --- !u!1 &5762349827043946163
 GameObject:
   m_ObjectHideFlags: 0
