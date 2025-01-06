@@ -47,7 +47,10 @@ namespace LostInTheSnow
             IsDialogueRunning = true;
             DialogueStarted?.Invoke();
             NewCurrentLine?.Invoke(CurrentLine);
-            
+
+
+            MakeAction();
+
         }
 
         public void NextLine()
@@ -137,8 +140,11 @@ namespace LostInTheSnow
                 {
                     _dialoguesLinesDimmension++;
                     MakeNewDialogueDimmension(dialogueCondition.Dialogue, "lines");
-                    NextLine();
+                    return;
                 }
+
+                NextLine();
+
             }
             else if (CurrentLine is DialogueEnd)
             {

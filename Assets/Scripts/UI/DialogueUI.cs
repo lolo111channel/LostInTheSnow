@@ -12,6 +12,9 @@ public class DialogueUI : MonoBehaviour
 
     private void OnEnable()
     {
+        _dialogueWhoTalk.text = "";
+        _dialogueContent.text = "";
+
         _ui.DialogueManager.DialogueStarted += DialogueStarted;
         _ui.DialogueManager.DialogueFinished += DialogueFinished;
         _ui.DialogueManager.NewCurrentLine += NewCurrentLine;
