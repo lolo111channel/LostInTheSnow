@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: other Shared Data
   m_EditorClassIdentifier: 
   m_TableCollectionName: other
-  m_TableCollectionNameGuidString: 00000000000000000000000000000000
-  m_Entries: []
+  m_TableCollectionNameGuidString: 0b24b34466a40354c98770605cc4911f
+  m_Entries:
+  - m_Id: 3712094208
+    m_Key: O_TAKE
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
