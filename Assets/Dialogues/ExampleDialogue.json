@@ -1,25 +1,25 @@
 {
     "header1": [
-        {"type":"dialogue","arguments":["You", "Test",""]},
+        {"type":"dialogue","arguments":["DIA_YOU", "DIA_EX_H1_01",""]},
         {"type":"action","id":"print","arguments":["1"]},
         {
             "type":"condition",
             "id":"test",
             "arguments":[true],
             "lines": [
-                {"type":"dialogue","arguments":["You", "Test1",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "Test1",""]},
                 {"type":"action","id":"print","arguments":["Action"]}
             ]
         },
 
-        {"type":"dialogue","arguments":["You", "Test after the condition",""]},
+        {"type":"dialogue","arguments":["DIA_YOU", "Test after the condition",""]},
         {"type":"end"}
     ],
 
     "header2": [
-        {"type":"dialogue","arguments":["You", "Header 2",""]},
+        {"type":"dialogue","arguments":["DIA_YOU", "Header 2",""]},
         {"type":"action","id":"print","arguments":["Action"]},
-        {"type":"dialogue","arguments":["You", "Header 2213",""]},
+        {"type":"dialogue","arguments":["DIA_YOU", "Header 2213",""]},
         {"type":"end"}
     ],
 
@@ -29,11 +29,11 @@
             "id":"has_item",
             "arguments":["ref:player",true,0],
             "lines": [
-                {"type":"dialogue","arguments":["You", "I have item about id 0",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "I have item about id 0",""]},
                 {"type":"end"}
             ]
         },
 
-        {"type":"dialogue","arguments":["You", "I don't have item about id 0",""]}
+        {"type":"dialogue","arguments":["DIA_YOU", "I don't have item about id 0",""]}
     ]
 }

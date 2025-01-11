@@ -2,6 +2,7 @@ using System;
 using CBStuff.DialogueSystem;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 
 public class DialogueUI : MonoBehaviour
 {
@@ -47,8 +48,10 @@ public class DialogueUI : MonoBehaviour
         _dialogeuPanel.SetActive(true);
         DialogueLine line = (DialogueLine)currentLine;
 
+        string whoTalk = LocalizationSettings.StringDatabase.GetLocalizedString("dialogues", line.Arguments[0]);
+        string content = LocalizationSettings.StringDatabase.GetLocalizedString("dialogues", line.Arguments[1]);
 
-        _dialogueWhoTalk.text = line.Arguments[0];
-        _dialogueContent.text = line.Arguments[1];
+        _dialogueWhoTalk.text = whoTalk;
+        _dialogueContent.text = content;
     }
 }

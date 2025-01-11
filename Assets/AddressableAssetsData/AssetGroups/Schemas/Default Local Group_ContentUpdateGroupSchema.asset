@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8757411353c6f744b166254f3de2098, type: 3}
-  m_Name: TestItem
+  m_Script: {fileID: 11500000, guid: 5834b5087d578d24c926ce20cd31e6d6, type: 3}
+  m_Name: Default Local Group_ContentUpdateGroupSchema
   m_EditorClassIdentifier: 
-  Id: 0
-  ItemName: IT_ITEM
-  Prefab: {fileID: 0}
+  m_Group: {fileID: 11400000, guid: 39ec1ad1909b2ab4e950724dfc8a903c, type: 2}
+  m_StaticContent: 0

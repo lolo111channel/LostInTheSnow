@@ -22,14 +22,16 @@ namespace LostInTheSnow
 
         private void FixedUpdate()
         {
+            HintView.SetHint("");
             Collider collider = GetHitCollider();
             if (collider != null)
             {
                 IHint hint = collider.gameObject.GetComponent<IHint>();
+
                 if (hint != null)
+                {
                     HintView.SetHint(hint.GetHint());
-                else
-                    HintView.SetHint("");
+                }
             }
         }
 

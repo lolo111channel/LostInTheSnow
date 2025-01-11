@@ -1,4 +1,6 @@
+using CBStuff.StringManipulation;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 
 
 namespace LostInTheSnow
@@ -33,7 +35,11 @@ namespace LostInTheSnow
         {
             if (_item == null) return "Error";
 
-            return $"Take {_item.ItemName}";
+            string localizedItemName = LocalizationSettings.StringDatabase.GetLocalizedString("items", _item.ItemName);
+            string localizedTake = LocalizationSettings.StringDatabase.GetLocalizedString("other", "O_TAKE");
+            localizedTake = StringManipulation.ChangeFirstLetterOnLarge(localizedTake);
+
+            return $"{localizedTake} {localizedItemName}";
         }
     }
 
