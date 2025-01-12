@@ -25,7 +25,6 @@ namespace LostInTheSnow
         {
             float motionX = 0;
             float motionZ = 0;
-
             if (dir != Vector2.zero)
             {
 
@@ -34,8 +33,8 @@ namespace LostInTheSnow
                 motionX = Mathf.Lerp(_playerVelocity.x, _movementSpeed * moveDir.x, _acceleration);
                 motionZ = Mathf.Lerp(_playerVelocity.z, _movementSpeed * moveDir.z, _acceleration);
 
-                _playerVelocity = _playerVelocity.normalized;
                 _playerVelocity = new Vector3(motionX, _playerVelocity.y ,motionZ);
+                _playerVelocity = _playerVelocity.normalized;
 
                 OnMoving?.Invoke();
                 return;
@@ -44,8 +43,8 @@ namespace LostInTheSnow
             motionX = Mathf.Lerp(_playerVelocity.x, 0.0f, _friction);
             motionZ = Mathf.Lerp(_playerVelocity.z, 0.0f, _friction);
 
-            _playerVelocity = _playerVelocity.normalized;
             _playerVelocity = new Vector3(motionX, _playerVelocity.y, motionZ);
+            _playerVelocity = _playerVelocity.normalized;
 
             OnStopped?.Invoke();
         }
@@ -55,11 +54,21 @@ namespace LostInTheSnow
             _characterController = GetComponent<CharacterController>();
         }
 
+        private void Update()
+        {
+            if (!_characterController.isGrounded)
+            {
+                _playerVelocity.y -= _gravityStrength * Time.deltaTime;
+            } 
+            else
+            {
+                _playerVelocity.y = -2.0f;
+            }
+            
+        }
 
         private void FixedUpdate()
         {
-            if (!_characterController.isGrounded)
-                _playerVelocity.y -= _gravityStrength * Time.deltaTime;
 
             _characterController.Move(_playerVelocity);
 

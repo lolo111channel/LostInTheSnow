@@ -220,7 +220,7 @@ MonoBehaviour:
   _movementSpeed: 0.1
   _acceleration: 0.85
   _friction: 0.25
-  _gravityStrength: 1
+  _gravityStrength: 0.05
   _body: {fileID: 2990030811764274021}
   _cameraContainer: {fileID: 6116456117507235696}
 --- !u!114 &4855424452455561851
@@ -315,7 +315,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4d79c07f35c4254ebde979f90129b23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentItem: {fileID: 0}
   _itemHolder: {fileID: 5503269169524019356}
   _itemInTheWorldPos: {fileID: 0}
 --- !u!114 &2819964815444538867
@@ -385,7 +384,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5762349827043946163}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea8af3b78db2d3c4d850275efa82fc03, type: 3}
   m_Name: 
