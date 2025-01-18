@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3baf8f4b0b66344aabeacc967973f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactionDistance: 100
+  _interactionDistance: 3
   _camera: {fileID: 0}
 --- !u!114 &950292347690134702
 MonoBehaviour:
@@ -315,6 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4d79c07f35c4254ebde979f90129b23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _startItem: {fileID: 0}
   _itemHolder: {fileID: 5503269169524019356}
   _itemInTheWorldPos: {fileID: 0}
 --- !u!114 &2819964815444538867

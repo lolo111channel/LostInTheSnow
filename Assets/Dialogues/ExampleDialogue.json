@@ -1,14 +1,14 @@
 {
     "header1": [
         {"type":"dialogue","arguments":["DIA_YOU", "DIA_EX_H1_01",""]},
-        {"type":"action","id":"print","arguments":["1"]},
+        {"type":"action","id":"print","sec":2,"arguments":["1"]},
         {
             "type":"condition",
             "id":"test",
             "arguments":[true],
             "lines": [
                 {"type":"dialogue","arguments":["DIA_YOU", "Test1",""]},
-                {"type":"action","id":"print","arguments":["Action"]}
+                {"type":"action","id":"print","sec":2,"arguments":["1"]}
             ]
         },
 
@@ -18,7 +18,7 @@
 
     "header2": [
         {"type":"dialogue","arguments":["DIA_YOU", "Header 2",""]},
-        {"type":"action","id":"print","arguments":["Action"]},
+        {"type":"action","id":"print","sec":2,"arguments":["1"]},
         {"type":"dialogue","arguments":["DIA_YOU", "Header 2213",""]},
         {"type":"end"}
     ],

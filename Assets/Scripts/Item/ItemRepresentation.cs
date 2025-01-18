@@ -41,6 +41,9 @@ namespace LostInTheSnow
 
             return $"{localizedTake} {localizedItemName}";
         }
+
+
+        public Item GetItem() => _item;
     }
 
 }

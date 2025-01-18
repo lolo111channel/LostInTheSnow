@@ -12,11 +12,13 @@ namespace CBStuff.DialogueSystem
         public string Id = "";
         public object[] Arguments = new object[]{ };
         public IDialogueActionFunc Func;
+        public float Seconds = 0;
         public DialogueAction(JToken dialogueLine) : base(dialogueLine)
         {
             this.Type = "action";
             this.Id = dialogueLine["id"].ToString();
             this.Arguments = dialogueLine["arguments"].Select(x => x).ToArray();
+            this.Seconds = dialogueLine["sec"].Value<float>();
 
             Assembly assembly = Assembly.GetExecutingAssembly();
             Type type = typeof(IDialogueActionFunc);

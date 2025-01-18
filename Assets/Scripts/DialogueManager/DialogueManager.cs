@@ -11,6 +11,8 @@ namespace LostInTheSnow
         public delegate void DialogueEvent();
         public event DialogueEvent DialogueStarted;
         public event DialogueEvent DialogueFinished;
+        public event DialogueEvent DialoguePaused;
+        public event DialogueEvent DialogueUnpaused;
 
         public delegate void DialogueNextLine(DialogueLineType currentLine);
         public event DialogueNextLine NewCurrentLine;
@@ -23,6 +25,10 @@ namespace LostInTheSnow
         private int _dialoguesLinesDimmension = 0;
 
         [SerializeField] private ReferencesForDialogue _referencesForDialogue;
+
+        private bool _isDialogueStopped = false;
+        private float _dialogueStoppedMaxTime = 0.0f;
+
 
         public void StartDialogue(string path, string headerName)
         {
@@ -55,6 +61,11 @@ namespace LostInTheSnow
 
         public void NextLine()
         {
+            if (_isDialogueStopped)
+            {
+                return;
+            }
+
             if (!IsDialogueRunning)
             {
                 return;
@@ -83,7 +94,7 @@ namespace LostInTheSnow
             DialogueFinished?.Invoke();
         }
 
-        private void StopDialogue()
+        private void FinishDialogue()
         {
             IsDialogueRunning = false;
             DialogueFinished?.Invoke();
@@ -96,6 +107,7 @@ namespace LostInTheSnow
             _currentIndexes[_dialoguesLinesDimmension] = 0;
             CurrentLine = _dialoguesLines[_dialoguesLinesDimmension][GetCurrentIndex()];
             NewCurrentLine?.Invoke(CurrentLine);
+            MakeAction();
         }
 
         private object[] ChangeArgumentsOnArgumentsWithReference(object[] args)
@@ -130,6 +142,12 @@ namespace LostInTheSnow
                 DialogueAction dialogueAction = (DialogueAction)CurrentLine;
                 object[] dialogueArgs = ChangeArgumentsOnArgumentsWithReference(dialogueAction.Arguments);
                 dialogueAction.Func.Action(dialogueArgs);
+                
+                if (dialogueAction.Seconds > 0)
+                {
+                    StopDialogue(dialogueAction.Seconds);
+                    return;
+                }
                 NextLine();
             }
             else if (CurrentLine is DialogueCondition)
@@ -140,7 +158,6 @@ namespace LostInTheSnow
                 {
                     _dialoguesLinesDimmension++;
                     MakeNewDialogueDimmension(dialogueCondition.Dialogue, "lines");
-                    return;
                 }
 
                 NextLine();
@@ -148,9 +165,25 @@ namespace LostInTheSnow
             }
             else if (CurrentLine is DialogueEnd)
             {
-                StopDialogue();
+                FinishDialogue();
             }
 
+        }
+
+        private void StopDialogue(float time)
+        {
+            _isDialogueStopped = true;
+            _dialogueStoppedMaxTime = time;
+            DialoguePaused?.Invoke();
+            Invoke("UnpauseDialoge", time);
+        }
+
+        private void UnpauseDialoge()
+        {
+            _isDialogueStopped = false;
+            _dialogueStoppedMaxTime = 0;
+            DialogueUnpaused?.Invoke();
+            NextLine();
         }
 
         private int GetCurrentIndex() => _currentIndexes[_dialoguesLinesDimmension];

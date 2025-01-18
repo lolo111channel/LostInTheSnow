@@ -19,6 +19,8 @@ public class DialogueUI : MonoBehaviour
         _ui.DialogueManager.DialogueStarted += DialogueStarted;
         _ui.DialogueManager.DialogueFinished += DialogueFinished;
         _ui.DialogueManager.NewCurrentLine += NewCurrentLine;
+        _ui.DialogueManager.DialoguePaused += DialoguePaused;
+        _ui.DialogueManager.DialogueUnpaused += DialogueUnpaused;
     }
 
     private void OnDisable()
@@ -26,6 +28,18 @@ public class DialogueUI : MonoBehaviour
         _ui.DialogueManager.DialogueStarted -= DialogueStarted;
         _ui.DialogueManager.DialogueFinished -= DialogueFinished;
         _ui.DialogueManager.NewCurrentLine -= NewCurrentLine;
+        _ui.DialogueManager.DialoguePaused -= DialoguePaused;
+        _ui.DialogueManager.DialogueUnpaused -= DialogueUnpaused;
+    }
+
+    private void DialogueUnpaused()
+    {
+        //_dialogeuPanel.SetActive(true);
+    }
+
+    private void DialoguePaused()
+    {
+        _dialogeuPanel.SetActive(false);
     }
 
     private void DialogueStarted()

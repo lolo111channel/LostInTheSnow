@@ -1,0 +1,45 @@
+{
+    "destroy_plank_1": [
+        {
+            "type":"condition",
+            "id":"has_item",
+            "arguments":["ref:player",false,2],
+            "lines": [
+                {"type":"action","id":"destroy_object","sec":0,"arguments":["ref:plank_1"]},
+                {"type":"dialogue","arguments":["DIA_YOU", "Done",""]},
+                {"type":"end"}
+            ]
+        },
+
+        {"type":"dialogue","arguments":["DIA_YOU", "I have to destroy it somehow.",""]}
+    ],
+
+    "destroy_plank_2": [
+        {
+            "type":"condition",
+            "id":"has_item",
+            "arguments":["ref:player",false,2],
+            "lines": [
+                {"type":"action","id":"destroy_object","sec":0,"arguments":["ref:plank_2"]},
+                {"type":"dialogue","arguments":["DIA_YOU", "Done",""]},
+                {"type":"end"}
+            ]
+        },
+
+        {"type":"dialogue","arguments":["DIA_YOU", "I have to destroy it somehow.",""]}
+    ],
+
+    "header3": [
+        {
+            "type":"condition",
+            "id":"has_item",
+            "arguments":["ref:player",true,0],
+            "lines": [
+                {"type":"dialogue","arguments":["DIA_YOU", "I have item about id 0",""]},
+                {"type":"end"}
+            ]
+        },
+
+        {"type":"dialogue","arguments":["DIA_YOU", "I don't have item about id 0",""]}
+    ]
+}

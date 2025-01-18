@@ -7,6 +7,7 @@ namespace LostInTheSnow
     public class Inventory : MonoBehaviour
     {
         public Item CurrentItem { get; private set; } = null;
+        [SerializeField] private GameObject _startItem = null;
         [SerializeField] private Transform _itemHolder;
         [SerializeField] private Transform _itemInTheWorldPos;
 
@@ -39,6 +40,18 @@ namespace LostInTheSnow
 
             CurrentItem = null;
         }
+
+        private void Start()
+        {
+            if (_startItem != null)
+            {
+                ItemRepresentation itemRepresentation = _startItem.GetComponent<ItemRepresentation>();
+                Item item = itemRepresentation.GetItem();
+                item.Prefab = _startItem;
+                PickUpItem(item);
+            }
+        }
+
     }
 
 }
