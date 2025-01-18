@@ -23,13 +23,36 @@
             "lines": [
                 {"type":"action","id":"play_timeline","sec":3.1,"arguments":["ref:timeline"]},
                 {"type":"action","id":"destroy_object","sec":0,"arguments":["ref:plank_2"]},
-                {"type":"dialogue","arguments":["DIA_YOU", "Done",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "Done.",""]},
                 {"type":"end"}
             ]
         },
 
         {"type":"dialogue","arguments":["DIA_YOU", "I have to destroy it somehow.",""]}
     ],
+
+    "player_see_radio_tower": [
+        {"type":"dialogue","arguments":["DIA_YOU", "This is thing that will help me with communication",""]},
+        {"type":"dialogue","arguments":["DIA_YOU", "with other 'Resistance' remembers",""]}
+    ],
+    
+
+    "first_try_communication": [
+        {
+            "type":"condition",
+            "id":"has_item",
+            "arguments":["ref:player",false,1],
+            "lines": [
+                {"type":"dialogue","arguments":["DIA_YOU", "No power.",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "I need to solve problem with power.",""]},
+                {"type":"end"}
+            ]
+        },
+
+        {"type":"dialogue","arguments":["DIA_YOU", "I need my radio.",""]}
+    ],
+
+
 
     "header3": [
         {
