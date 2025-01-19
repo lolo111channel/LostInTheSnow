@@ -33,7 +33,7 @@
 
     "player_see_radio_tower": [
         {"type":"dialogue","arguments":["DIA_YOU", "This is thing that will help me with communication",""]},
-        {"type":"dialogue","arguments":["DIA_YOU", "with other 'Resistance' remembers",""]}
+        {"type":"dialogue","arguments":["DIA_YOU", "with other 'Resistance' members",""]}
     ],
     
 
@@ -44,7 +44,8 @@
             "arguments":["ref:player",false,1],
             "lines": [
                 {"type":"dialogue","arguments":["DIA_YOU", "No power.",""]},
-                {"type":"dialogue","arguments":["DIA_YOU", "I need to solve problem with power.",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "I need to solve this.",""]},
+                {"type":"action","id":"change_header_in_dialogue_object","sec":0,"arguments":["ref:radio_tower_box","player_interact_with_radio_tower_again"]},
                 {"type":"end"}
             ]
         },
@@ -52,6 +53,83 @@
         {"type":"dialogue","arguments":["DIA_YOU", "I need my radio.",""]}
     ],
 
+    "player_interact_with_radio_tower_again": [
+        {"type":"dialogue","arguments":["DIA_YOU", "I must find a way to restore power.",""]}
+    ],
+
+    "interact_with_generator_panel_without_fuel": [
+        {"type":"dialogue","arguments":["DIA_YOU", "Firstly I must find fuel.",""]}
+    ], 
+
+    "interact_with_generator_panel": [
+        {"type":"dialogue","arguments":["DIA_YOU", "I guess it works.",""]},
+        {"type":"action","id":"change_header_in_dialogue_object","sec":0,"arguments":["ref:radio_tower_box","contact_with_other_resistance_members"]},
+        {"type":"action","id":"change_header_in_dialogue_object","sec":0,"arguments":["ref:generator_panel","after_interact_with_generator_panel"]}
+    ], 
+
+    "after_interact_with_generator_panel": [
+        {"type":"dialogue","arguments":["DIA_YOU", "It works",""]}
+    ], 
+
+    "interact_with_fuel_filler": [
+        {
+            "type":"condition",
+            "id":"has_item",
+            "arguments":["ref:player",false,3],
+            "lines": [
+                {"type":"dialogue","arguments":["DIA_YOU", "Done",""]},
+                {"type":"action","id":"change_header_in_dialogue_object","sec":0,"arguments":["ref:generator_panel","interact_with_generator_panel"]},
+                {"type":"action","id":"change_header_in_dialogue_object","sec":0,"arguments":["ref:generator_fuel_filler","second_interact_with_fuel_filler"]},
+                {"type":"end"}
+            ]
+        },
+
+        {"type":"dialogue","arguments":["DIA_YOU", "I need fuel.",""]}
+    ], 
+
+    "second_interact_with_fuel_filler": [
+        {"type":"dialogue","arguments":["DIA_YOU", "I poured fuel",""]}
+    ], 
+
+    "contact_with_other_resistance_members": [
+        {
+            "type":"condition",
+            "id":"has_item",
+            "arguments":["ref:player",false,1],
+            "lines": [
+                {"type":"dialogue","arguments":["DIA_YOU", "Hello, can anyone hear me?",""]},
+                {"type":"dialogue","arguments":["???", "Mira?",""]},
+                {"type":"dialogue","arguments":["???", "you <...> alive.",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "I'm alive.",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "I escaped.",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "Where are you?",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "Josh?",""]},
+                {"type":"dialogue","arguments":["Josh", "Ne..r the cit.. V",""]},
+                {"type":"dialogue","arguments":["Josh", "D..'t move, wa.t for us",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "What are you doing near the city V. It's dangerous",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "If they find you will you..",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "<disruptions> Josh?",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "JOSH!?",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "Great, no signal.",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "I should find place to rest.",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "I think that the room next door, will be fine.",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "And tomorrow I will go to the city of V",""]},
+                {"type":"action","id":"change_header_in_dialogue_object","sec":0,"arguments":["ref:radio_tower_box","after_contact_with_other_resistance_members"]},
+                {"type":"action","id":"set_active","sec":0,"arguments":["ref:tr_the_end", true]},
+                {"type":"end"}
+            ]
+        },
+        {"type":"dialogue","arguments":["DIA_YOU", "I need the radio",""]} 
+    ],
+
+    "after_contact_with_other_resistance_members": [
+        {"type":"dialogue","arguments":["DIA_YOU", "No signal.",""]}
+    ],
+
+    "the_end": [
+        {"type":"dialogue","arguments":["DIA_YOU", "Here will be cutscene.",""]},
+        {"type":"dialogue","arguments":["DIA_YOU", "The end.",""]}
+    ],
 
 
     "header3": [

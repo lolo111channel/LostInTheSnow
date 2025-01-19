@@ -107,7 +107,11 @@ namespace LostInTheSnow
             _currentIndexes[_dialoguesLinesDimmension] = 0;
             CurrentLine = _dialoguesLines[_dialoguesLinesDimmension][GetCurrentIndex()];
             NewCurrentLine?.Invoke(CurrentLine);
-            MakeAction();
+
+            if (!(CurrentLine is DialogueLine))
+            {
+                MakeAction();
+            }
         }
 
         private object[] ChangeArgumentsOnArgumentsWithReference(object[] args)
@@ -158,6 +162,7 @@ namespace LostInTheSnow
                 {
                     _dialoguesLinesDimmension++;
                     MakeNewDialogueDimmension(dialogueCondition.Dialogue, "lines");
+                    return;
                 }
 
                 NextLine();

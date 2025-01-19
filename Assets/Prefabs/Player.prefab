@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3baf8f4b0b66344aabeacc967973f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactionDistance: 3
+  _interactionDistance: 2
   _camera: {fileID: 0}
 --- !u!114 &950292347690134702
 MonoBehaviour:

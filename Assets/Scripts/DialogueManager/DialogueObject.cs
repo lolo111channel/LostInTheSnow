@@ -16,6 +16,11 @@ namespace LostInTheSnow
         {
             return $"Interact with {_objectName}";
         }
+
+        public void SetHeader(string newValue)
+        {
+            _vars.Header = newValue;
+        }
     }
 
 }
