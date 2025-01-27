@@ -64,6 +64,7 @@
     ], 
 
     "interact_with_generator_panel": [
+        {"type":"action","id":"change_material","sec":0,"arguments":["ref:power_generator_panel_mesh","ref:material_store",0,1]},
         {"type":"dialogue","arguments":["DIA_YOU", "I guess it works.",""]},
         {"type":"action","id":"change_header_in_dialogue_object","sec":0,"arguments":["ref:radio_tower_box","contact_with_other_resistance_members"]},
         {"type":"action","id":"change_header_in_dialogue_object","sec":0,"arguments":["ref:generator_panel","after_interact_with_generator_panel"]}
