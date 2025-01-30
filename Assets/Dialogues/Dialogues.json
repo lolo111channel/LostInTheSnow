@@ -134,6 +134,28 @@
         {"type":"dialogue","arguments":["DIA_YOU", "The end.",""]}
     ],
 
+    "open_door": [
+        {
+            "type":"condition",
+            "id":"has_item",
+            "arguments":["ref:player",false,4],
+            "lines": [
+                {"type":"dialogue","arguments":["DIA_YOU", "I guess it fits.",""]},
+                {"type":"action","id":"play_timeline","sec":0.0,"arguments":["ref:door"]},
+                {"type":"action","id":"change_header_in_dialogue_object","sec":0,"arguments":["ref:door_dialogue_obj","door_opened"]},
+                {"type":"end"}
+            ]
+        },
+        {"type":"dialogue","arguments":["DIA_YOU", "I need a key.",""]}
+    ],
+
+    "door_opened": [
+        {"type":"dialogue","arguments":["DIA_YOU", "I've opened this door already.",""]}
+    ],
+
+    "start": [
+        {"type":"dialogue","arguments":["DIA_YOU", "START DIALOGUE.",""]}
+    ],
 
     "header3": [
         {
