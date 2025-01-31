@@ -118,7 +118,7 @@
                 {"type":"dialogue","arguments":["DIA_YOU", "I think that the room next door, will be fine.",""]},
                 {"type":"dialogue","arguments":["DIA_YOU", "And tomorrow I will go to the city of V",""]},
                 {"type":"action","id":"change_header_in_dialogue_object","sec":0,"arguments":["ref:radio_tower_box","after_contact_with_other_resistance_members"]},
-                {"type":"action","id":"set_active","sec":0,"arguments":["ref:tr_the_end", true]},
+                {"type":"action","id":"change_header_in_dialogue_object","sec":0,"arguments":["ref:bed", "the_end"]},
                 {"type":"end"}
             ]
         },
@@ -130,8 +130,26 @@
     ],
 
     "the_end": [
-        {"type":"dialogue","arguments":["DIA_YOU", "Here will be cutscene.",""]},
-        {"type":"dialogue","arguments":["DIA_YOU", "The end.",""]}
+        {"type":"action","id":"set_active","sec":0,"arguments":["ref:player_camera", false]},
+        {"type":"action","id":"set_active","sec":0,"arguments":["ref:player_ui_hint", false]},
+        {"type":"action","id":"set_active","sec":0,"arguments":["ref:player_ui_crosshair", false]},
+        {"type":"action","id":"set_active","sec":3.0,"arguments":["ref:end_camera", true]},
+        {"type":"action","id":"set_active","sec":1.5,"arguments":["ref:one_hour_later_ui", true]},
+        {"type":"action","id":"set_active","sec":0.0,"arguments":["ref:one_hour_later_ui", false]},
+        {"type":"dialogue","arguments":["???", "Don't move.",""]},
+        {"type":"dialogue","arguments":["???", "You will put this on her head.",""]},
+        {"type":"action","id":"set_active","sec":0.0,"arguments":["ref:black_screen", true]},
+        {"type":"action","id":"set_active","sec":0.0,"arguments":["ref:end_camera", false]},
+        {"type":"action","id":"set_active","sec":5.0,"arguments":["ref:end_camera_2", true]},
+        {"type":"action","id":"set_active","sec":0.0,"arguments":["ref:black_screen", false]},
+        {"type":"dialogue","arguments":["???", "You thought that we wouldn't found you?",""]},
+        {"type":"dialogue","arguments":["???", "It was a big mistake to stay here.",""]},
+        {"type":"dialogue","arguments":["???", "Now you'll tell us, where is Josh?",""]},
+        {"type":"dialogue","arguments":["DIA_YOU", "I don't know.",""]},
+        {"type":"dialogue","arguments":["???", "You want to fall? I know that you know.",""]},
+        {"type":"dialogue","arguments":["DIA_YOU", "I won't tell.",""]},
+        {"type":"dialogue","arguments":["???", "Guys, blindfold her and throw her",""]},
+        {"type":"action","id":"set_active","sec":0.0,"arguments":["ref:black_screen", true]}
     ],
 
     "open_door": [
@@ -155,6 +173,10 @@
 
     "start": [
         {"type":"dialogue","arguments":["DIA_YOU", "START DIALOGUE.",""]}
+    ],
+
+    "player_try_sleep": [
+        {"type":"dialogue","arguments":["DIA_YOU", "Not now.",""]}
     ],
 
     "header3": [
