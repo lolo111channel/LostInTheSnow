@@ -35,6 +35,7 @@ namespace LostInTheSnow
             if (CurrentItem.Prefab != null)
             {
                 CurrentItem.Prefab.AddComponent<Rigidbody>();
+                CurrentItem.Prefab.GetComponent<BoxCollider>().enabled = true;
                 CurrentItem.Prefab.transform.parent = _itemInTheWorldPos.parent;
             }
 

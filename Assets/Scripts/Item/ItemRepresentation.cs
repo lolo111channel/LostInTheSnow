@@ -24,6 +24,7 @@ namespace LostInTheSnow
 
             if (inventory != null)
             {
+                _item.Prefab.GetComponent<BoxCollider>().enabled = false;
                 inventory.PickUpItem(_item);
                 Destroy(gameObject);
             }

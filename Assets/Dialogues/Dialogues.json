@@ -8,12 +8,29 @@
                 {"type":"action","id":"play_timeline","sec":3.1,"arguments":["ref:timeline"]},
                 {"type":"action","id":"play_timeline","sec":2.3,"arguments":["ref:plank_1"]},
                 {"type":"action","id":"destroy_object","sec":0,"arguments":["ref:plank_1"]},
-                {"type":"dialogue","arguments":["DIA_YOU", "Done",""]},
                 {"type":"end"}
             ]
         },
 
-        {"type":"dialogue","arguments":["DIA_YOU", "I have to destroy it somehow.",""]}
+        {
+            "type":"condition",
+            "id":"has_item",
+            "arguments":["ref:player",false,-1],
+            "lines": [
+                {"type":"dialogue","arguments":["DIA_YOU", "DIA_DESTROY_PLANK_02",""]},
+                {"type":"end"}
+            ]
+        },
+
+        {
+            "type":"condition",
+            "id":"has_item",
+            "arguments":["ref:player",true,2],
+            "lines": [
+                {"type":"dialogue","arguments":["DIA_YOU", "DIA_DESTROY_PLANK_01",""]},
+                {"type":"end"}
+            ]
+        }
     ],
 
     "destroy_plank_2": [
@@ -25,17 +42,34 @@
                 {"type":"action","id":"play_timeline","sec":3.1,"arguments":["ref:timeline"]},
                 {"type":"action","id":"play_timeline","sec":2.3,"arguments":["ref:plank_2"]},
                 {"type":"action","id":"destroy_object","sec":0,"arguments":["ref:plank_2"]},
-                {"type":"dialogue","arguments":["DIA_YOU", "Done.",""]},
                 {"type":"end"}
             ]
         },
 
-        {"type":"dialogue","arguments":["DIA_YOU", "I have to destroy it somehow.",""]}
+        {
+            "type":"condition",
+            "id":"has_item",
+            "arguments":["ref:player",false,-1],
+            "lines": [
+                {"type":"dialogue","arguments":["DIA_YOU", "DIA_DESTROY_PLANK_02",""]},
+                {"type":"end"}
+            ]
+        },
+
+        {
+            "type":"condition",
+            "id":"has_item",
+            "arguments":["ref:player",true,2],
+            "lines": [
+                {"type":"dialogue","arguments":["DIA_YOU", "DIA_DESTROY_PLANK_01",""]},
+                {"type":"end"}
+            ]
+        }
     ],
 
     "player_see_radio_tower": [
-        {"type":"dialogue","arguments":["DIA_YOU", "This is thing that will help me with communication",""]},
-        {"type":"dialogue","arguments":["DIA_YOU", "with other 'Resistance' members",""]}
+        {"type":"dialogue","arguments":["DIA_YOU", "DIA_PLAYER_SEE_RADIO_TOWER_01",""]},
+        {"type":"dialogue","arguments":["DIA_YOU", "DIA_PLAYER_SEE_RADIO_TOWER_02",""]}
     ],
     
 
@@ -45,33 +79,33 @@
             "id":"has_item",
             "arguments":["ref:player",false,1],
             "lines": [
-                {"type":"dialogue","arguments":["DIA_YOU", "No power.",""]},
-                {"type":"dialogue","arguments":["DIA_YOU", "I need to solve this.",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "DIA_TRY_COMMUNICATION_01",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "DIA_TRY_COMMUNICATION_02",""]},
                 {"type":"action","id":"change_header_in_dialogue_object","sec":0,"arguments":["ref:radio_tower_box","player_interact_with_radio_tower_again"]},
                 {"type":"end"}
             ]
         },
 
-        {"type":"dialogue","arguments":["DIA_YOU", "I need my radio.",""]}
+        {"type":"dialogue","arguments":["DIA_YOU", "DIA_TRY_COMMUNICATION_03",""]}
     ],
 
     "player_interact_with_radio_tower_again": [
-        {"type":"dialogue","arguments":["DIA_YOU", "I must find a way to restore power.",""]}
+        {"type":"dialogue","arguments":["DIA_YOU", "DIA_PLAYER_INTERACT_WITH_RADIO_TOWER_AGAIN_01",""]}
     ],
 
     "interact_with_generator_panel_without_fuel": [
-        {"type":"dialogue","arguments":["DIA_YOU", "Firstly I must find fuel.",""]}
+        {"type":"dialogue","arguments":["DIA_YOU", "DIA_INTERACT_WITH_GENERATOR_PANEL_WITHOUT_FUEL_01",""]}
     ], 
 
     "interact_with_generator_panel": [
         {"type":"action","id":"change_material","sec":0,"arguments":["ref:power_generator_panel_mesh","ref:material_store",0,1]},
-        {"type":"dialogue","arguments":["DIA_YOU", "I guess it works.",""]},
+        {"type":"dialogue","arguments":["DIA_YOU", "DIA_INTERACT_WITH_GENERATOR_PANEL_01",""]},
         {"type":"action","id":"change_header_in_dialogue_object","sec":0,"arguments":["ref:radio_tower_box","contact_with_other_resistance_members"]},
         {"type":"action","id":"change_header_in_dialogue_object","sec":0,"arguments":["ref:generator_panel","after_interact_with_generator_panel"]}
     ], 
 
     "after_interact_with_generator_panel": [
-        {"type":"dialogue","arguments":["DIA_YOU", "It works",""]}
+        {"type":"dialogue","arguments":["DIA_YOU", "DIA_AFTER_INTERACT_WITH_GENERATOR_PANEL_01",""]}
     ], 
 
     "interact_with_fuel_filler": [
@@ -80,18 +114,18 @@
             "id":"has_item",
             "arguments":["ref:player",false,3],
             "lines": [
-                {"type":"dialogue","arguments":["DIA_YOU", "Done",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "DIA_INTERACT_WITH_FUEL_FILLER_01",""]},
                 {"type":"action","id":"change_header_in_dialogue_object","sec":0,"arguments":["ref:generator_panel","interact_with_generator_panel"]},
                 {"type":"action","id":"change_header_in_dialogue_object","sec":0,"arguments":["ref:generator_fuel_filler","second_interact_with_fuel_filler"]},
                 {"type":"end"}
             ]
         },
 
-        {"type":"dialogue","arguments":["DIA_YOU", "I need fuel.",""]}
+        {"type":"dialogue","arguments":["DIA_YOU", "DIA_INTERACT_WITH_FUEL_FILLER_02",""]}
     ], 
 
     "second_interact_with_fuel_filler": [
-        {"type":"dialogue","arguments":["DIA_YOU", "I poured fuel",""]}
+        {"type":"dialogue","arguments":["DIA_YOU", "DIA_SECOND_INTERACT_WITH_FUEL_FILLER_01",""]}
     ], 
 
     "contact_with_other_resistance_members": [
@@ -100,33 +134,33 @@
             "id":"has_item",
             "arguments":["ref:player",false,1],
             "lines": [
-                {"type":"dialogue","arguments":["DIA_YOU", "Hello, can anyone hear me?",""]},
-                {"type":"dialogue","arguments":["???", "Mira?",""]},
-                {"type":"dialogue","arguments":["???", "you <...> alive.",""]},
-                {"type":"dialogue","arguments":["DIA_YOU", "I'm alive.",""]},
-                {"type":"dialogue","arguments":["DIA_YOU", "I escaped.",""]},
-                {"type":"dialogue","arguments":["DIA_YOU", "Where are you?",""]},
-                {"type":"dialogue","arguments":["DIA_YOU", "Josh?",""]},
-                {"type":"dialogue","arguments":["Josh", "Ne..r the cit.. V",""]},
-                {"type":"dialogue","arguments":["Josh", "D..'t move, wa.t for us",""]},
-                {"type":"dialogue","arguments":["DIA_YOU", "What are you doing near the city V. It's dangerous",""]},
-                {"type":"dialogue","arguments":["DIA_YOU", "If they find you will you..",""]},
-                {"type":"dialogue","arguments":["DIA_YOU", "<disruptions> Josh?",""]},
-                {"type":"dialogue","arguments":["DIA_YOU", "JOSH!?",""]},
-                {"type":"dialogue","arguments":["DIA_YOU", "Great, no signal.",""]},
-                {"type":"dialogue","arguments":["DIA_YOU", "I should find place to rest.",""]},
-                {"type":"dialogue","arguments":["DIA_YOU", "I think that the room next door, will be fine.",""]},
-                {"type":"dialogue","arguments":["DIA_YOU", "And tomorrow I will go to the city of V",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_01",""]},
+                {"type":"dialogue","arguments":["???", "DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_02",""]},
+                {"type":"dialogue","arguments":["???", "DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_03",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_04",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_05",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_06",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_07",""]},
+                {"type":"dialogue","arguments":["Josh", "DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_08",""]},
+                {"type":"dialogue","arguments":["Josh", "DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_09",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_10",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_11",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_12",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_13",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_14",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_15",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_16",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_17",""]},
                 {"type":"action","id":"change_header_in_dialogue_object","sec":0,"arguments":["ref:radio_tower_box","after_contact_with_other_resistance_members"]},
                 {"type":"action","id":"change_header_in_dialogue_object","sec":0,"arguments":["ref:bed", "the_end"]},
                 {"type":"end"}
             ]
         },
-        {"type":"dialogue","arguments":["DIA_YOU", "I need the radio",""]} 
+        {"type":"dialogue","arguments":["DIA_YOU", "DIA_TRY_COMMUNICATION_03",""]} 
     ],
 
     "after_contact_with_other_resistance_members": [
-        {"type":"dialogue","arguments":["DIA_YOU", "No signal.",""]}
+        {"type":"dialogue","arguments":["DIA_YOU", "DIA_AFTER_CONTACT_WITH_OTHER_RESITANCE_MEMBERS_01",""]}
     ],
 
     "the_end": [
@@ -136,20 +170,22 @@
         {"type":"action","id":"set_active","sec":3.0,"arguments":["ref:end_camera", true]},
         {"type":"action","id":"set_active","sec":1.5,"arguments":["ref:one_hour_later_ui", true]},
         {"type":"action","id":"set_active","sec":0.0,"arguments":["ref:one_hour_later_ui", false]},
-        {"type":"dialogue","arguments":["???", "Don't move.",""]},
-        {"type":"dialogue","arguments":["???", "You will put this on her head.",""]},
+        {"type":"dialogue","arguments":["???", "DIA_THE_END_01",""]},
+        {"type":"dialogue","arguments":["???", "DIA_THE_END_02",""]},
         {"type":"action","id":"set_active","sec":0.0,"arguments":["ref:black_screen", true]},
         {"type":"action","id":"set_active","sec":0.0,"arguments":["ref:end_camera", false]},
         {"type":"action","id":"set_active","sec":5.0,"arguments":["ref:end_camera_2", true]},
         {"type":"action","id":"set_active","sec":0.0,"arguments":["ref:black_screen", false]},
-        {"type":"dialogue","arguments":["???", "You thought that we wouldn't found you?",""]},
-        {"type":"dialogue","arguments":["???", "It was a big mistake to stay here.",""]},
-        {"type":"dialogue","arguments":["???", "Now you'll tell us, where is Josh?",""]},
-        {"type":"dialogue","arguments":["DIA_YOU", "I don't know.",""]},
-        {"type":"dialogue","arguments":["???", "You want to fall? I know that you know.",""]},
-        {"type":"dialogue","arguments":["DIA_YOU", "I won't tell.",""]},
-        {"type":"dialogue","arguments":["???", "Guys, blindfold her and throw her",""]},
-        {"type":"action","id":"set_active","sec":0.0,"arguments":["ref:black_screen", true]}
+        {"type":"dialogue","arguments":["???", "DIA_THE_END_03",""]},
+        {"type":"dialogue","arguments":["???", "DIA_THE_END_04",""]},
+        {"type":"dialogue","arguments":["???", "DIA_THE_END_05",""]},
+        {"type":"dialogue","arguments":["DIA_YOU", "DIA_THE_END_06",""]},
+        {"type":"dialogue","arguments":["???", "DIA_THE_END_07",""]},
+        {"type":"dialogue","arguments":["DIA_YOU", "DIA_THE_END_08",""]},
+        {"type":"dialogue","arguments":["???", "DIA_THE_END_09",""]},
+        {"type":"action","id":"set_active","sec":3.0,"arguments":["ref:black_screen", true]},
+        {"type":"dialogue","arguments":["Mira", "DIA_THE_END_10",""]},
+        {"type":"dialogue","arguments":["???", "DIA_THE_END_11",""]}
     ],
 
     "open_door": [
@@ -158,25 +194,27 @@
             "id":"has_item",
             "arguments":["ref:player",false,4],
             "lines": [
-                {"type":"dialogue","arguments":["DIA_YOU", "I guess it fits.",""]},
+                {"type":"dialogue","arguments":["DIA_YOU", "DIA_OPEN_DOOR_01",""]},
                 {"type":"action","id":"play_timeline","sec":0.0,"arguments":["ref:door"]},
                 {"type":"action","id":"change_header_in_dialogue_object","sec":0,"arguments":["ref:door_dialogue_obj","door_opened"]},
                 {"type":"end"}
             ]
         },
-        {"type":"dialogue","arguments":["DIA_YOU", "I need a key.",""]}
+        {"type":"dialogue","arguments":["DIA_YOU", "DIA_OPEN_DOOR_02",""]}
     ],
 
     "door_opened": [
-        {"type":"dialogue","arguments":["DIA_YOU", "I've opened this door already.",""]}
+        {"type":"dialogue","arguments":["DIA_YOU", "DIA_DOOR_OPENED_01",""]}
     ],
 
     "start": [
-        {"type":"dialogue","arguments":["DIA_YOU", "START DIALOGUE.",""]}
+        {"type":"dialogue","arguments":["DIA_YOU", "DIA_START_01",""]},
+        {"type":"dialogue","arguments":["DIA_YOU", "DIA_START_02",""]},
+        {"type":"dialogue","arguments":["DIA_YOU", "DIA_START_03",""]}
     ],
 
     "player_try_sleep": [
-        {"type":"dialogue","arguments":["DIA_YOU", "Not now.",""]}
+        {"type":"dialogue","arguments":["DIA_YOU", "DIA_PLAYER_TRY_SLEEP_01",""]}
     ],
 
     "header3": [

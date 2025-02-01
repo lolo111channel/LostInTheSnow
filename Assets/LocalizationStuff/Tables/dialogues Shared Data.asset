@@ -23,6 +23,206 @@ MonoBehaviour:
     m_Key: DIA_YOU
     m_Metadata:
       m_Items: []
+  - m_Id: 7601808159674368
+    m_Key: DIA_DESTROY_PLANK_01
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7601838719373312
+    m_Key: DIA_DESTROY_PLANK_02
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7606908190068736
+    m_Key: DIA_PLAYER_SEE_RADIO_TOWER_01
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7606924019372032
+    m_Key: DIA_PLAYER_SEE_RADIO_TOWER_02
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7607487834492928
+    m_Key: DIA_TRY_COMMUNICATION_01
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7607499511435264
+    m_Key: DIA_TRY_COMMUNICATION_02
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7607514816450560
+    m_Key: DIA_TRY_COMMUNICATION_03
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7608272672657408
+    m_Key: DIA_PLAYER_INTERACT_WITH_RADIO_TOWER_AGAIN_01
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7608508027637760
+    m_Key: DIA_INTERACT_WITH_GENERATOR_PANEL_WITHOUT_FUEL_01
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7608723140907008
+    m_Key: DIA_INTERACT_WITH_GENERATOR_PANEL_01
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7608986241208320
+    m_Key: DIA_AFTER_INTERACT_WITH_GENERATOR_PANEL_01
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7609189983719424
+    m_Key: DIA_INTERACT_WITH_FUEL_FILLER_01
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7609242597068800
+    m_Key: DIA_INTERACT_WITH_FUEL_FILLER_02
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7609252294299648
+    m_Key: DIA_SECOND_INTERACT_WITH_FUEL_FILLER_01
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611857019998208
+    m_Key: DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_01
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611863932211200
+    m_Key: DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_02
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611873495224320
+    m_Key: DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_03
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611883293118464
+    m_Key: DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_04
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611900439433216
+    m_Key: DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_05
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611911109742592
+    m_Key: DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_06
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611921616474112
+    m_Key: DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_07
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611931879936000
+    m_Key: DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_08
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611945637253120
+    m_Key: DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_09
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611957481967616
+    m_Key: DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611969360236544
+    m_Key: DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611983893499904
+    m_Key: DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611984862384128
+    m_Key: DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_13
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7612016403550208
+    m_Key: DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_14
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7612027308740608
+    m_Key: DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_15
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7612037576396800
+    m_Key: DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_16
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7612052038356992
+    m_Key: DIA_CONTACT_WITH_OTHER_RESISTANCE_MEMBERS_17
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614107381534720
+    m_Key: DIA_AFTER_CONTACT_WITH_OTHER_RESITANCE_MEMBERS_01
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614206534881280
+    m_Key: DIA_THE_END_01
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614237367209984
+    m_Key: DIA_THE_END_02
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614249350336512
+    m_Key: DIA_THE_END_03
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614264986701824
+    m_Key: DIA_THE_END_04
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614276026109952
+    m_Key: DIA_THE_END_05
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614284813176832
+    m_Key: DIA_THE_END_06
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614294313275392
+    m_Key: DIA_THE_END_07
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614305654673408
+    m_Key: DIA_THE_END_08
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614318673793024
+    m_Key: DIA_THE_END_09
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7616096916082688
+    m_Key: DIA_THE_END_10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7616116851609600
+    m_Key: DIA_THE_END_11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7616567118532608
+    m_Key: DIA_OPEN_DOOR_01
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7616673448333312
+    m_Key: DIA_OPEN_DOOR_02
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7616736497111040
+    m_Key: DIA_DOOR_OPENED_01
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7617157471014912
+    m_Key: DIA_START_01
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7617171198971904
+    m_Key: DIA_START_02
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7617230758088704
+    m_Key: DIA_START_03
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7617685621968896
+    m_Key: DIA_PLAYER_TRY_SLEEP_01
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

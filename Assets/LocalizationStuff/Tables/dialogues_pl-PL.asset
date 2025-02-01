@@ -26,6 +26,212 @@ MonoBehaviour:
     m_Localized: Ty
     m_Metadata:
       m_Items: []
+  - m_Id: 7601808159674368
+    m_Localized: Chyba tak tego nie zniszcze.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7601838719373312
+    m_Localized: "Musz\u0119 znale\u017A\u0107 spos\xF3b na zniszczenie tego."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7606908190068736
+    m_Localized: "Wie\u017Ca radiowa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7606924019372032
+    m_Localized: "Teraz b\u0119d\u0119 mog\u0142a skontaktowa\u0107 si\u0119 z ocala\u0142ymi
+      cz\u0142onkami OPORU."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7607487834492928
+    m_Localized: "Nie dzia\u0142a. <wzdycha>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7607499511435264
+    m_Localized: "Musz\u0119 znale\u017A\u0107 spos\xF3b na przywr\xF3cenie pr\u0105du."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7607514816450560
+    m_Localized: "Potrzebuje radia, by m\xF3c si\u0119 skomunikowa\u0107 z innymi."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7608272672657408
+    m_Localized: "Musz\u0119 znale\u017A\u0107 spos\xF3b na przywr\xF3cenie pr\u0105du."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7608508027637760
+    m_Localized: Chyba brakuje paliwa.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7608723140907008
+    m_Localized: "Chyba dzia\u0142a."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7608986241208320
+    m_Localized: "Nie powinnam ju\u017C tego dotyka\u0107."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7609189983719424
+    m_Localized: Gotowe.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7609242597068800
+    m_Localized: "Hmm, tu chyba musz\u0119 wla\u0107 paliwa, tylko gdzie je znajd\u0119?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7609252294299648
+    m_Localized: "Uzupe\u0142ni\u0142am ju\u017C to, teraz tylko musz\u0119 w\u0142\u0105czy\u0107
+      generator."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611857019998208
+    m_Localized: "Halo, czy kto\u015B mnie s\u0142yszy?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611863932211200
+    m_Localized: Mi..ra?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611873495224320
+    m_Localized: "Ty ...  \u017Cyj.."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611883293118464
+    m_Localized: "\u017Byj\u0119."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611900439433216
+    m_Localized: "Uciek\u0142am."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611911109742592
+    m_Localized: "Gdzie jeste\u015Bcie?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611921616474112
+    m_Localized: Josh?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611931879936000
+    m_Localized: Nied...ko mia.. V.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611945637253120
+    m_Localized: N.. rusz..,  cz..kaj na nas.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611957481967616
+    m_Localized: Co robicie blisko miasta V. To jest niezbieczne.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611969360236544
+    m_Localized: "Je\u017Celi was znajd\u0105 to..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611983893499904
+    m_Localized: "<zak\u0142\xF3cenia> Josh?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611984862384128
+    m_Localized: JOSH!?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7612016403550208
+    m_Localized: "<wdzycha> \u015Awietnie, brak sygna\u0142u."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7612027308740608
+    m_Localized: "Powinnam odpcz\u0105\u0107."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7612037576396800
+    m_Localized: "Pok\xF3j obok powinnien si\u0119 do tego nadawa\u0107."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7612052038356992
+    m_Localized: "A jutro wyrusze do miasta V i spr\xF3bowa\u0107 tam znale\u017A\u0107
+      cz\u0142onk\xF3w OPORU."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614107381534720
+    m_Localized: "Brak sygna\u0142u. Mam nadzieje \u017Ce to chwilowe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614206534881280
+    m_Localized: "Nie ruszaj si\u0119."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614237367209984
+    m_Localized: "Ty, we\u017A za\u0142\xF3\u017C jej to na g\u0142owe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614249350336512
+    m_Localized: "My\u015Bla\u0142a\u015B \u017Ce nie znajdziemy ci\u0119?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614264986701824
+    m_Localized: "Zostawanie tu by\u0142o wielkim b\u0142\u0119dem."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614276026109952
+    m_Localized: "Lepiej nam powiedz gdzie s\u0105 inny cz\u0142onkowie waszej grupy
+      terrorystycznej."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614284813176832
+    m_Localized: Nic nie wiem.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614294313275392
+    m_Localized: "Mamy ci\u0119 zrzuci\u0107 z tego okna. Wiemy \u017Ce kontaktowa\u0142a\u015B
+      si\u0119 z nimi, lepiej m\xF3w."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614305654673408
+    m_Localized: Nic nie powiem!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614318673793024
+    m_Localized: "Ch\u0142opaki zawi\u0105\u017Ccie jej oczy i zrzucie j\u0105."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7616096916082688
+    m_Localized: Aaaa..
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7616116851609600
+    m_Localized: "Ch\u0142opaki ona jeszcze si\u0119 rusza zastrzelcie j\u0105."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7616567118532608
+    m_Localized: Chyba pasuje.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7616673448333312
+    m_Localized: "Zakmni\u0119te, potrzebuje klucza."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7616736497111040
+    m_Localized: Otwarte drzwi.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7617157471014912
+    m_Localized: "Chyba im uciek\u0142am."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7617171198971904
+    m_Localized: "Za mn\u0105 jest wie\u017Ca radiowa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7617230758088704
+    m_Localized: "U\u017Cyjej do komunikacji z innymi."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7617685621968896
+    m_Localized: "Musz\u0119 najpierw skomunikowa\u0107 si\u0119 z innymi, p\xF3\u017Aniej
+      b\u0119d\u0119 mog\u0142a odpocz\u0105\u0107."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
