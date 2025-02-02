@@ -21,11 +21,16 @@ namespace LostInTheSnow
         private CharacterController _characterController;
         private Vector3 _playerVelocity = new();
 
+        private bool _isPlayerGrounded = false;
+
         public void Move(Vector2 dir)
         {
             float motionX = 0;
             float motionZ = 0;
-            if (dir != Vector2.zero)
+
+            Vector2 xYVelocity = new();
+
+            if (dir != Vector2.zero && _characterController.isGrounded)
             {
 
                 Vector3 moveDir = gameObject.transform.TransformDirection(new(dir.x, 0.0f, dir.y));
@@ -33,8 +38,11 @@ namespace LostInTheSnow
                 motionX = Mathf.Lerp(_playerVelocity.x, _movementSpeed * moveDir.x, _acceleration);
                 motionZ = Mathf.Lerp(_playerVelocity.z, _movementSpeed * moveDir.z, _acceleration);
 
-                _playerVelocity = new Vector3(motionX, _playerVelocity.y ,motionZ);
-                _playerVelocity = _playerVelocity.normalized;
+
+
+                xYVelocity = new Vector2(motionX, motionZ);
+                xYVelocity = xYVelocity.normalized;
+                _playerVelocity = new(xYVelocity.x, _playerVelocity.y, xYVelocity.y);
 
                 OnMoving?.Invoke();
                 return;
@@ -43,8 +51,9 @@ namespace LostInTheSnow
             motionX = Mathf.Lerp(_playerVelocity.x, 0.0f, _friction);
             motionZ = Mathf.Lerp(_playerVelocity.z, 0.0f, _friction);
 
-            _playerVelocity = new Vector3(motionX, _playerVelocity.y, motionZ);
-            _playerVelocity = _playerVelocity.normalized;
+            xYVelocity = new Vector2(motionX, motionZ);
+            xYVelocity = xYVelocity.normalized;
+            _playerVelocity = new(xYVelocity.x, _playerVelocity.y, xYVelocity.y);
 
             OnStopped?.Invoke();
         }
@@ -56,13 +65,22 @@ namespace LostInTheSnow
 
         private void Update()
         {
+            Debug.Log(_playerVelocity);
+            Debug.Log(_characterController.isGrounded);
             if (!_characterController.isGrounded)
             {
+                if (_isPlayerGrounded)
+                {
+                    _playerVelocity.y = 0.0f;
+                    _isPlayerGrounded = false;
+                }
+
                 _playerVelocity.y -= _gravityStrength * Time.deltaTime;
             } 
             else
             {
                 _playerVelocity.y = -2.0f;
+                _isPlayerGrounded = true;
             }
             
         }

@@ -220,7 +220,7 @@ MonoBehaviour:
   _movementSpeed: 0.1
   _acceleration: 0.85
   _friction: 0.25
-  _gravityStrength: 0.05
+  _gravityStrength: 0.01
   _body: {fileID: 2990030811764274021}
   _cameraContainer: {fileID: 6116456117507235696}
 --- !u!114 &4855424452455561851

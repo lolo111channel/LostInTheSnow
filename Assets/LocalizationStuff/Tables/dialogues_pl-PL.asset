@@ -27,7 +27,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7601808159674368
-    m_Localized: Chyba tak tego nie zniszcze.
+    m_Localized: "Chyba tak tego nie zniszcz\u0119."
     m_Metadata:
       m_Items: []
   - m_Id: 7601838719373312
@@ -121,7 +121,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7611957481967616
-    m_Localized: Co robicie blisko miasta V. To jest niezbieczne.
+    m_Localized: 'Co robicie blisko miasta V? To jest niebezpieczne.
+
+      
+
+'
     m_Metadata:
       m_Items: []
   - m_Id: 7611969360236544
@@ -137,24 +141,24 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7612016403550208
-    m_Localized: "<wdzycha> \u015Awietnie, brak sygna\u0142u."
+    m_Localized: "<wzdycha> \u015Awietnie, brak sygna\u0142u.\r"
     m_Metadata:
       m_Items: []
   - m_Id: 7612027308740608
-    m_Localized: "Powinnam odpcz\u0105\u0107."
+    m_Localized: "Powinnam odpocz\u0105\u0107."
     m_Metadata:
       m_Items: []
   - m_Id: 7612037576396800
-    m_Localized: "Pok\xF3j obok powinnien si\u0119 do tego nadawa\u0107."
+    m_Localized: "Pok\xF3j obok powinien si\u0119 do tego nadawa\u0107.\r"
     m_Metadata:
       m_Items: []
   - m_Id: 7612052038356992
-    m_Localized: "A jutro wyrusze do miasta V i spr\xF3bowa\u0107 tam znale\u017A\u0107
-      cz\u0142onk\xF3w OPORU."
+    m_Localized: "A jutro wyrusz\u0119 do miasta V i spr\xF3bowa\u0107 tam znale\u017A\u0107
+      cz\u0142onk\xF3w OPORU.\r\n\r\n"
     m_Metadata:
       m_Items: []
   - m_Id: 7614107381534720
-    m_Localized: "Brak sygna\u0142u. Mam nadzieje \u017Ce to chwilowe."
+    m_Localized: "Brak sygna\u0142u. Mam nadzieje, \u017Ce to chwilowe.\r"
     m_Metadata:
       m_Items: []
   - m_Id: 7614206534881280
@@ -162,11 +166,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7614237367209984
-    m_Localized: "Ty, we\u017A za\u0142\xF3\u017C jej to na g\u0142owe."
+    m_Localized: "Ty, we\u017A i za\u0142\xF3\u017C jej to na g\u0142ow\u0119.\r\n\r\n"
     m_Metadata:
       m_Items: []
   - m_Id: 7614249350336512
-    m_Localized: "My\u015Bla\u0142a\u015B \u017Ce nie znajdziemy ci\u0119?"
+    m_Localized: "My\u015Bla\u0142a\u015B, \u017Ce nie znajdziemy ci\u0119?\r\n\r\n"
     m_Metadata:
       m_Items: []
   - m_Id: 7614264986701824
@@ -174,8 +178,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7614276026109952
-    m_Localized: "Lepiej nam powiedz gdzie s\u0105 inny cz\u0142onkowie waszej grupy
-      terrorystycznej."
+    m_Localized: "Lepiej nam powiedz, gdzie s\u0105 inny cz\u0142onkowie waszej grupy
+      terrorystycznej.\r\n\r\n"
     m_Metadata:
       m_Items: []
   - m_Id: 7614284813176832
@@ -183,8 +187,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7614294313275392
-    m_Localized: "Mamy ci\u0119 zrzuci\u0107 z tego okna. Wiemy \u017Ce kontaktowa\u0142a\u015B
-      si\u0119 z nimi, lepiej m\xF3w."
+    m_Localized: "Mamy ci\u0119 zrzuci\u0107 z tego okna. Wiemy, \u017Ce kontaktowa\u0142a\u015B
+      si\u0119 z nimi, lepiej m\xF3w.\r\n\r\n"
     m_Metadata:
       m_Items: []
   - m_Id: 7614305654673408
@@ -200,7 +204,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7616116851609600
-    m_Localized: "Ch\u0142opaki ona jeszcze si\u0119 rusza zastrzelcie j\u0105."
+    m_Localized: "Ch\u0142opaki ona jeszcze si\u0119 rusza, zastrzelcie j\u0105.\r\n\r\n"
     m_Metadata:
       m_Items: []
   - m_Id: 7616567118532608
@@ -208,7 +212,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7616673448333312
-    m_Localized: "Zakmni\u0119te, potrzebuje klucza."
+    m_Localized: "Zamkni\u0119te, potrzebuje klucza.\r\n\r\n"
     m_Metadata:
       m_Items: []
   - m_Id: 7616736497111040
@@ -224,7 +228,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7617230758088704
-    m_Localized: "U\u017Cyjej do komunikacji z innymi."
+    m_Localized: "U\u017Cyje jej do komunikacji z innymi.\r\n\r\n"
     m_Metadata:
       m_Items: []
   - m_Id: 7617685621968896

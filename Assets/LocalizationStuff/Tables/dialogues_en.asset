@@ -26,6 +26,209 @@ MonoBehaviour:
     m_Localized: You
     m_Metadata:
       m_Items: []
+  - m_Id: 7601808159674368
+    m_Localized: I don't think I will destroy it like that.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7601838719373312
+    m_Localized: I must find a way to destroy it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7606908190068736
+    m_Localized: A radio tower.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7606924019372032
+    m_Localized: Now, I can contact surviving members of the RESISTANCE.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7607487834492928
+    m_Localized: "It doesn\u2019t work. <sighs>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7607499511435264
+    m_Localized: I must find a way to restore the power.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7607514816450560
+    m_Localized: I need a radio so I can contact others.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7608272672657408
+    m_Localized: I must find a way to restore the power.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7608508027637760
+    m_Localized: I think it needs fuel.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7608723140907008
+    m_Localized: I think it works.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7608986241208320
+    m_Localized: I shouldn't touch it anymore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7609189983719424
+    m_Localized: Done.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7609242597068800
+    m_Localized: Hmm, I think I must pour fuel here, but where will I find it?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7609252294299648
+    m_Localized: I have already completed it, now I just need to turn on the generator.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611857019998208
+    m_Localized: Hello, can anyone hear me?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611863932211200
+    m_Localized: Mi..ra?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611873495224320
+    m_Localized: Yo.. aliv..
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611883293118464
+    m_Localized: I alive.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611900439433216
+    m_Localized: I escaped.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611911109742592
+    m_Localized: Where are you?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611921616474112
+    m_Localized: Josh?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611931879936000
+    m_Localized: We ar.. ne.. t.e ci.y V.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611945637253120
+    m_Localized: Don't move, wait for us.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611957481967616
+    m_Localized: What are you doing near the city V? It's dangerous.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611969360236544
+    m_Localized: If they find you...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611983893499904
+    m_Localized: <disruption> Josh?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7611984862384128
+    m_Localized: JOSH!?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7612016403550208
+    m_Localized: <sighs> Great, no signal.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7612027308740608
+    m_Localized: I should rest.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7612037576396800
+    m_Localized: The room next to it should be good for that.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7612052038356992
+    m_Localized: And tomorrow, I'll set out for city V and try to find members of
+      the Resistance there.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614107381534720
+    m_Localized: No signal. I hope it's just temporary.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614206534881280
+    m_Localized: Don't move.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614237367209984
+    m_Localized: You take it and put it on her head.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614249350336512
+    m_Localized: Did you think we wouldn't find you?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614264986701824
+    m_Localized: Staying here was a big mistake.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614276026109952
+    m_Localized: You better tell us where the other members of your terrorist group
+      are.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614284813176832
+    m_Localized: I don't know anything.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614294313275392
+    m_Localized: "We\u2019re going to throw you out of the window. We know that you
+      contacted them, better speak up."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614305654673408
+    m_Localized: "I won\u2019t say anything!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7616096916082688
+    m_Localized: Aaaa..
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7614318673793024
+    m_Localized: The guys blindfold her and throw her out.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7616116851609600
+    m_Localized: "The guys, she\u2019s still moving, shoot her."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7616567118532608
+    m_Localized: I think it fits.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7616673448333312
+    m_Localized: It's closed, I need a key.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7616736497111040
+    m_Localized: The door is open
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7617157471014912
+    m_Localized: I think I escaped from them.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7617171198971904
+    m_Localized: Behind me is the radio tower.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7617230758088704
+    m_Localized: I'll use it to communicate with others.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7617685621968896
+    m_Localized: First, I must communicate with others, then I can rest.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
