@@ -196,6 +196,7 @@
             "lines": [
                 {"type":"dialogue","arguments":["DIA_YOU", "DIA_OPEN_DOOR_01",""]},
                 {"type":"action","id":"play_timeline","sec":0.0,"arguments":["ref:door"]},
+                {"type":"action","id":"play_sound","sec":0.0,"arguments":["ref:open_door_sound"]},
                 {"type":"action","id":"change_header_in_dialogue_object","sec":0,"arguments":["ref:door_dialogue_obj","door_opened"]},
                 {"type":"end"}
             ]
