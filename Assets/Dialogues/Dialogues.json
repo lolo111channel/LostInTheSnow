@@ -5,7 +5,8 @@
             "id":"has_item",
             "arguments":["ref:player",false,2],
             "lines": [
-                {"type":"action","id":"play_timeline","sec":3.1,"arguments":["ref:timeline"]},
+                {"type":"action","id":"play_timeline","sec":2.9,"arguments":["ref:timeline"]},
+                {"type":"action","id":"play_sound","sec":0, "arguments": ["ref:cut_wood_sound"]},
                 {"type":"action","id":"play_timeline","sec":2.3,"arguments":["ref:plank_1"]},
                 {"type":"action","id":"destroy_object","sec":0,"arguments":["ref:plank_1"]},
                 {"type":"end"}
@@ -39,7 +40,8 @@
             "id":"has_item",
             "arguments":["ref:player",false,2],
             "lines": [
-                {"type":"action","id":"play_timeline","sec":3.1,"arguments":["ref:timeline"]},
+                {"type":"action","id":"play_timeline","sec":2.9,"arguments":["ref:timeline"]},
+                {"type":"action","id":"play_sound","sec":0, "arguments": ["ref:cut_wood_sound"]},
                 {"type":"action","id":"play_timeline","sec":2.3,"arguments":["ref:plank_2"]},
                 {"type":"action","id":"destroy_object","sec":0,"arguments":["ref:plank_2"]},
                 {"type":"end"}
