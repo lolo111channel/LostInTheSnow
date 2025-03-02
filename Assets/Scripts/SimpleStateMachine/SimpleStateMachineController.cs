@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace LostInTheSnow
@@ -33,6 +34,10 @@ namespace LostInTheSnow
             }
         }
 
+        public StateMachineState GetCurrentState()
+        {
+            return _currentState;
+        }
 
         private void Start()
         {
@@ -41,7 +46,7 @@ namespace LostInTheSnow
 
 
         [Serializable]
-        private class StateMachineState
+        public class StateMachineState
         {
             public string StateName = "test";
             public List<MonoBehaviour> Components = new();

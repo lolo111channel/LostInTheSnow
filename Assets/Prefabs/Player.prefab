@@ -179,6 +179,9 @@ MonoBehaviour:
     Components:
     - {fileID: 2819964815444538867}
     - {fileID: 3348856016974027978}
+  - StateName: PAUSEMENU
+    Components:
+    - {fileID: 2819964815444538867}
   _currentState:
     StateName: test
     Components: []
@@ -196,6 +199,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 7497008453362758015}
   _stateMachine: {fileID: 872541537673919796}
+  _escInput: {fileID: -5208138588900473832, guid: d5772e9a39b53ef43bce9c806fd94999, type: 3}
+  _pauseMenu: {fileID: 0}
 --- !u!114 &7497008453362758015
 MonoBehaviour:
   m_ObjectHideFlags: 0

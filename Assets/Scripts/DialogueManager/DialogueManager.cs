@@ -3,6 +3,7 @@ using CBStuff.DialogueSystem;
 using System.Collections.Generic;
 using UnityEngine;
 using Newtonsoft.Json.Linq;
+using System;
 
 namespace LostInTheSnow
 {

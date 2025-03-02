@@ -186,8 +186,7 @@
         {"type":"dialogue","arguments":["DIA_YOU", "DIA_THE_END_08",""]},
         {"type":"dialogue","arguments":["???", "DIA_THE_END_09",""]},
         {"type":"action","id":"set_active","sec":3.0,"arguments":["ref:black_screen", true]},
-        {"type":"dialogue","arguments":["Mira", "DIA_THE_END_10",""]},
-        {"type":"dialogue","arguments":["???", "DIA_THE_END_11",""]}
+        {"type":"action","id":"change_level","sec":0.0,"arguments":[0]}
     ],
 
     "open_door": [
